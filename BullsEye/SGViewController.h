@@ -10,4 +10,6 @@
 
 @interface SGViewController : UIViewController
 
+- (IBAction)showAlert;
+
 @end
