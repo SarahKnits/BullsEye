@@ -10,6 +10,7 @@
 
 @interface SGViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UISlider *slider;
+@property (nonatomic, weak) IBOutlet UILabel *targetLabel;
 
 - (IBAction)showAlert;
 - (IBAction)sliderMoved:(UISlider *)slider;
