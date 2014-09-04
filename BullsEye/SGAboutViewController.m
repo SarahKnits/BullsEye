@@ -51,4 +51,9 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 @end

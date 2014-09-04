@@ -22,6 +22,19 @@
 
 - (void)viewDidLoad
 {
+    UIImage *thumbImageNormal = [UIImage imageNamed:@"SliderThumb-Normal"];
+    [self.slider setThumbImage:thumbImageNormal forState:UIControlStateNormal];
+    UIImage *thumbImageHighlighted = [UIImage imageNamed:@"SliderThumb-Highlighted"];
+    [self.slider setThumbImage:thumbImageHighlighted forState:UIControlStateHighlighted];
+    UIImage *trackLeftImage =
+    [[UIImage imageNamed:@"SliderTrackLeft"]
+     resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 14)]; [self.slider setMinimumTrackImage:trackLeftImage
+                                                                                           forState:UIControlStateNormal];
+    UIImage *trackRightImage =
+    [[UIImage imageNamed:@"SliderTrackRight"]
+     resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 14)];
+    [self.slider setMaximumTrackImage:trackRightImage forState:UIControlStateNormal];
+     
     [super viewDidLoad];
 	[self startNewGame];
     [self updateLabels];
@@ -108,5 +121,10 @@
 {
     [self startNewRound];
     [self updateLabels];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 @end
